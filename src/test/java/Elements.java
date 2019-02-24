@@ -54,4 +54,43 @@ public class Elements {
         return $("input[data-ui*='password']");
     }
 
+    /**
+     * Получение окна с информационным сообщением
+     * @return блок с сообщением
+     */
+    public SelenideElement notifyMessage(){
+        return $(".message_notify");
+    }
+
+    /**
+     * Получение кнопки закрыть для окна с информационным сообщением
+     * @return кнопка закрыть
+     */
+    public SelenideElement closeNotifyMessage(){
+        return $(".close[title*=Закрыть]");
+    }
+
+    /**
+     * Получение popup окна на странице пользователя
+     * @return popup окно
+     */
+    public SelenideElement popupMessageOnUserPage(){
+        return $(".onesignal-popover-dialog");
+    }
+
+    /**
+     * Получение кнопки вход на странице авторизации
+     * @return кнопку входа
+     */
+    public SelenideElement getloginButtonOnAuthPage(){
+        return $("button.inputSubmit[data-ui='submit']");
+    }
+
+    /**
+     * Получение блока с логином пользователя на странице пользователя
+     * @return блок с логином пользователя
+     */
+    public SelenideElement getUserloginOnPage() {
+      return   $(".username span");
+    }
 }
